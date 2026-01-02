@@ -15,7 +15,7 @@ Launch specialized agents for complex, multi-step tasks.
 ## Available Agents
 ${AGENT_TYPE_REGISTRY_STRING}
 
-Specify `subagent_type` parameter to select agent.
+Specify \`subagent_type\` parameter to select agent.
 
 ## When NOT to Use
 - Specific file path → use ${READ_TOOL.name} or ${GLOB_TOOL.name}
@@ -26,8 +26,8 @@ Specify `subagent_type` parameter to select agent.
 - Include 3-5 word description
 - Launch multiple agents concurrently via single message with multiple tool calls
 - Agent results not visible to user—summarize for them
-- `run_in_background`: retrieve results later with ${TASK_TOOL}
-- `resume` parameter: continue from previous agent ID with preserved context
+- \`run_in_background\`: retrieve results later with ${TASK_TOOL}
+- \`resume\` parameter: continue from previous agent ID with preserved context
 - Agents with "access to current context" see conversation history—use concise prompts
 - Tell agent whether to write code or just research
 - Use proactively if agent description says so

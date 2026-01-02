@@ -21,15 +21,15 @@ Execute bash commands in persistent shell with optional timeout.
 **NOT for**: file operations (use specialized tools instead)
 
 ## Before Executing
-1. **Directory check**: Use `ls` to verify parent directory before creating files/dirs
-2. **Quote paths with spaces**: `cd "/path/with spaces"` (not `cd /path/with spaces`)
+1. **Directory check**: Use \`ls\` to verify parent directory before creating files/dirs
+2. **Quote paths with spaces**: \`cd "/path/with spaces"\` (not \`cd /path/with spaces\`)
 
 ## Usage
 - Required: command
 - Optional: timeout (up to ${CUSTOM_TIMEOUT_MS()}ms, default ${MAX_TIMEOUT_MS()}ms)
 - Include 5-10 word description
 - Output truncated at ${MAX_OUTPUT_CHARS()} chars
-- `run_in_background`: run async, monitor via ${BASH_TOOL_NAME}
+- \`run_in_background\`: run async, monitor via ${BASH_TOOL_NAME}
 ${BASH_TOOL_EXTRA_NOTES()}
 
 ## Avoid These Commands (use tools instead)
@@ -41,11 +41,11 @@ ${BASH_TOOL_EXTRA_NOTES()}
 
 ## Multiple Commands
 - Independent: parallel ${BASH_TOOL_NAME} calls
-- Dependent: chain with `&&` (e.g., `git add . && git commit -m "msg"`)
-- Use `;` only when failure doesn't matter
+- Dependent: chain with \`&&\` (e.g., \`git add . && git commit -m "msg"\`)
+- Use \`;\` only when failure doesn't matter
 - No newlines between commands
 
 ## Working Directory
-Use absolute paths; avoid `cd` unless user requests it.
+Use absolute paths; avoid \`cd\` unless user requests it.
 
 ${GIT_COMMIT_AND_PR_CREATION_INSTRUCTION()}

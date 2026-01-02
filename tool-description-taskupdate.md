@@ -12,7 +12,7 @@ Update tasks in task list.
 ## Fields
 - **status**: 'resolved' / 'open'
 - **subject/description**: Change title/description
-- **addComment**: `{author, content}` for progress. Use `CLAUDE_CODE_AGENT_ID` as author.
+- **addComment**: \`{author, content}\` for progress. Use \`CLAUDE_CODE_AGENT_ID\` as author.
 - **addReferences**: Link related tasks (bidirectional)
 - **addBlocks/addBlockedBy**: Dependency ordering
 
@@ -20,12 +20,12 @@ Update tasks in task list.
 **Claim task before updating.** Only update assigned tasks (team leads can update any).
 
 Claim via TeammateTool:
-- Lead: `assignTask` to assign
-- Teammate: `claimTask` to self-claim
+- Lead: \`assignTask\` to assign
+- Teammate: \`claimTask\` to self-claim
 
 ## Examples
-```json
+\`\`\`json
 {"taskId": "1", "status": "resolved"}
 {"taskId": "2", "addComment": {"author": "agent-id", "content": "Found root cause"}}
 {"taskId": "3", "status": "resolved", "addComment": {"author": "agent-id", "content": "Done"}}
-```
+\`\`\`

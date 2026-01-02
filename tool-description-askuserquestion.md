@@ -11,5 +11,5 @@ Ask user questions during execution for:
 
 Notes:
 - Users can always select "Other" for custom input
-- `multiSelect: true` for multiple selections
+- \`multiSelect: true\` for multiple selections
 - Recommended option: list first with "(Recommended)" suffix

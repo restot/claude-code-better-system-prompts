@@ -9,11 +9,11 @@ Search web for current information beyond knowledge cutoff.
 
 ## MANDATORY: Include Sources
 After answering, ALWAYS add:
-```
+\`\`\`
 Sources:
 - [Title 1](url1)
 - [Title 2](url2)
-```
+\`\`\`
 
 ## Usage
 - Results include links as markdown hyperlinks

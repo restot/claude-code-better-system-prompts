@@ -5,7 +5,7 @@ ccVersion: 2.0.14
 -->
 Fast file pattern matching for any codebase size.
 
-- Patterns: `**/*.js`, `src/**/*.ts`
+- Patterns: \`**/*.js\`, \`src/**/*.ts\`
 - Returns paths sorted by modification time
 - Use for finding files by name
 - For multi-round searches, use Agent tool instead

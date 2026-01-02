@@ -12,9 +12,9 @@ Execute skills in main conversation.
 Skills provide specialized capabilities. Slash commands (e.g., "/commit", "/review-pr") invoke skills.
 
 ## Usage
-- `skill: "pdf"` — invoke pdf skill
-- `skill: "commit", args: "-m 'Fix'"` — with arguments
-- `skill: "ms-office-suite:pdf"` — fully qualified name
+- \`skill: "pdf"\` — invoke pdf skill
+- \`skill: "commit", args: "-m 'Fix'"\` — with arguments
+- \`skill: "ms-office-suite:pdf"\` — fully qualified name
 
 ## Rules
 - **IMMEDIATELY** invoke when skill is relevant—before any other response

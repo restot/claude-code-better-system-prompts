@@ -14,8 +14,8 @@ Exact string replacement in files.
 - No emojis unless user requests
 
 ## Parameters
-- `old_string`: must be unique in file (or use `replace_all`)
-- `new_string`: replacement text
-- `replace_all`: replace all occurrences (useful for renaming)
+- \`old_string\`: must be unique in file (or use \`replace_all\`)
+- \`new_string\`: replacement text
+- \`replace_all\`: replace all occurrences (useful for renaming)
 
-If `old_string` not unique: include more context or use `replace_all`.
+If \`old_string\` not unique: include more context or use \`replace_all\`.
