@@ -7,27 +7,24 @@ ccVersion: 2.0.43
 variables:
   - ASK_USER_QUESTION_TOOL_NAME
 -->
-Use this tool when you are in plan mode and have finished writing your plan to the plan file and are ready for user approval.
+Use when plan is written to plan file and ready for user approval.
 
-## How This Tool Works
-- You should have already written your plan to the plan file specified in the plan mode system message
-- This tool does NOT take the plan content as a parameter - it will read the plan from the file you wrote
-- This tool simply signals that you're done planning and ready for the user to review and approve
-- The user will see the contents of your plan file when they review it
+## How It Works
+- Plan already written to file specified in plan mode system message
+- This tool signals completion—reads plan from file
+- User sees plan file contents for review
 
-## When to Use This Tool
-IMPORTANT: Only use this tool when the task requires planning the implementation steps of a task that requires writing code. For research tasks where you're gathering information, searching files, reading files or in general trying to understand the codebase - do NOT use this tool.
+**Only for implementation tasks**—not research/exploration.
 
-## Handling Ambiguity in Plans
-Before using this tool, ensure your plan is clear and unambiguous. If there are multiple valid approaches or unclear requirements:
-1. Use the ${ASK_USER_QUESTION_TOOL_NAME} tool to clarify with the user
-2. Ask about specific implementation choices (e.g., architectural patterns, which library to use)
-3. Clarify any assumptions that could affect the implementation
-4. Edit your plan file to incorporate user feedback
-5. Only proceed with ExitPlanMode after resolving ambiguities and updating the plan file
+## Before Using
+Resolve ambiguity:
+1. ${ASK_USER_QUESTION_TOOL_NAME} to clarify
+2. Ask about implementation choices
+3. Clarify assumptions
+4. Edit plan file with feedback
+5. Proceed after resolving
 
 ## Examples
-
-1. Initial task: "Search for and understand the implementation of vim mode in the codebase" - Do not use the exit plan mode tool because you are not planning the implementation steps of a task.
-2. Initial task: "Help me implement yank mode for vim" - Use the exit plan mode tool after you have finished planning the implementation steps of the task.
-3. Initial task: "Add a new feature to handle user authentication" - If unsure about auth method (OAuth, JWT, etc.), use ${ASK_USER_QUESTION_TOOL_NAME} first, then use exit plan mode tool after clarifying the approach.
+- "Understand vim mode" → Don't use (research)
+- "Implement yank mode" → Use after planning
+- "Add auth" → Clarify via ${ASK_USER_QUESTION_TOOL_NAME} first, then use

@@ -5,14 +5,14 @@ ccVersion: 2.0.14
 variables:
   - CONVERSATION_HISTORY
 -->
-Analyze the following conversation between a user and an assistant (assistant responses are hidden).
+Analyze conversation (assistant responses hidden):
 
 ${CONVERSATION_HISTORY}
 
-Think step-by-step about:
-1. Does the user seem frustrated at the Asst based on their messages? Look for signs like repeated corrections, negative language, etc.
-2. Has the user explicitly asked to SEND/CREATE/PUSH a pull request to GitHub? This means they want to actually submit a PR to a repository, not just work on code together or prepare changes. Look for explicit requests like: "create a pr", "send a pull request", "push a pr", "open a pr", "submit a pr to github", etc. Do NOT count mentions of working on a PR together, preparing for a PR, or discussing PR content.
+Consider:
+1. Is user frustrated? (repeated corrections, negative language)
+2. Did user explicitly ask to SEND/CREATE/PUSH a PR to GitHub? (Not just "work on PR" or "prepare changes"—actual submit requests like "create a pr", "push a pr", "open a pr")
 
-Based on your analysis, output:
+Output:
 <frustrated>true/false</frustrated>
 <pr_request>true/false</pr_request>

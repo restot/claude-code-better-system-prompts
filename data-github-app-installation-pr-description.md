@@ -3,44 +3,31 @@ name: 'Data: GitHub App installation PR description'
 description: Template for PR description when installing Claude Code GitHub App integration
 ccVersion: 2.0.14
 -->
-## \uD83E\uDD16 Installing Claude Code GitHub App
+## Installing Claude Code GitHub App
 
-This PR adds a GitHub Actions workflow that enables Claude Code integration in our repository.
+Adds workflow enabling Claude Code integration.
 
 ### What is Claude Code?
-
-[Claude Code](https://claude.com/claude-code) is an AI coding agent that can help with:
-- Bug fixes and improvements  
-- Documentation updates
-- Implementing new features
-- Code reviews and suggestions
-- Writing tests
-- And more!
+[Claude Code](https://claude.com/claude-code) - AI coding agent for bug fixes, docs, features, reviews, tests.
 
 ### How it works
+After merge, mention @claude in PR/issue comments. Claude analyzes context and executes in GitHub action.
 
-Once this PR is merged, we'll be able to interact with Claude by mentioning @claude in a pull request or issue comment.
-Once the workflow is triggered, Claude will analyze the comment and surrounding context, and execute on the request in a GitHub action.
-
-### Important Notes
-
-- **This workflow won't take effect until this PR is merged**
-- **@claude mentions won't work until after the merge is complete**
-- The workflow runs automatically whenever Claude is mentioned in PR or issue comments
-- Claude gets access to the entire PR or issue context including files, diffs, and previous comments
+### Notes
+- Workflow activates after merge
+- @claude mentions won't work until merged
+- Runs when Claude mentioned in PR/issue comments
+- Claude gets full PR/issue context
 
 ### Security
+- API key stored as GitHub Actions secret
+- Only write-access users can trigger
+- All runs in Actions history
+- Default tools: read/write files, create comments/branches/commits
 
-- Our Anthropic API key is securely stored as a GitHub Actions secret
-- Only users with write access to the repository can trigger the workflow
-- All Claude runs are stored in the GitHub Actions run history
-- Claude's default tools are limited to reading/writing files and interacting with our repo by creating comments, branches, and commits.
-- We can add more allowed tools by adding them to the workflow file like:
-
-\`\`\`
+Add allowed tools in workflow:
+```
 allowed_tools: Bash(npm install),Bash(npm run build),Bash(npm run lint),Bash(npm run test)
-\`\`\`
+```
 
-There's more information in the [Claude Code action repo](https://github.com/anthropics/claude-code-action).
-
-After merging this PR, let's try mentioning @claude in a comment on any PR to get started!
+More info: [claude-code-action repo](https://github.com/anthropics/claude-code-action)

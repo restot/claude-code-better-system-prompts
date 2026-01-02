@@ -5,29 +5,21 @@ ccVersion: 2.0.56
 variables:
   - GET_CURRENT_DATE_FN
 -->
+Search web for current information beyond knowledge cutoff.
 
-- Allows Claude to search the web and use the results to inform responses
-- Provides up-to-date information for current events and recent data
-- Returns search result information formatted as search result blocks, including links as markdown hyperlinks
-- Use this tool for accessing information beyond Claude's knowledge cutoff
-- Searches are performed automatically within a single API call
+## MANDATORY: Include Sources
+After answering, ALWAYS add:
+```
+Sources:
+- [Title 1](url1)
+- [Title 2](url2)
+```
 
-CRITICAL REQUIREMENT - You MUST follow this:
-  - After answering the user's question, you MUST include a "Sources:" section at the end of your response
-  - In the Sources section, list all relevant URLs from the search results as markdown hyperlinks: [Title](URL)
-  - This is MANDATORY - never skip including sources in your response
-  - Example format:
+## Usage
+- Results include links as markdown hyperlinks
+- Domain filtering supported (include/block sites)
+- US only
 
-    [Your answer here]
-
-    Sources:
-    - [Source Title 1](https://example.com/1)
-    - [Source Title 2](https://example.com/2)
-
-Usage notes:
-  - Domain filtering is supported to include or block specific websites
-  - Web search is only available in the US
-
-IMPORTANT - Use the correct year in search queries:
-  - Today's date is ${GET_CURRENT_DATE_FN()}. You MUST use this year when searching for recent information, documentation, or current events.
-  - Example: If today is 2025-07-15 and the user asks for "latest React docs", search for "React documentation 2025", NOT "React documentation 2024"
+## Date Handling
+Today: ${GET_CURRENT_DATE_FN()}. Use current year in queries.
+Example: "React documentation 2025" not "2024"
