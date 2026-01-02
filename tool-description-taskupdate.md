@@ -24,8 +24,8 @@ Claim via TeammateTool:
 - Teammate: \`claimTask\` to self-claim
 
 ## Examples
-\`\`\`json
+<example>
 {"taskId": "1", "status": "resolved"}
 {"taskId": "2", "addComment": {"author": "agent-id", "content": "Found root cause"}}
 {"taskId": "3", "status": "resolved", "addComment": {"author": "agent-id", "content": "Done"}}
-\`\`\`
+</example>

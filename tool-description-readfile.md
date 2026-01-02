@@ -11,18 +11,11 @@ variables:
 Read files from local filesystem. Assume any user-provided path is valid.
 
 ## Usage
-- \`file_path\`: absolute path required
+- `file_path`: absolute path required
 - Default: up to ${DEFAULT_READ_LINES} lines from start
-- Optional: \`offset\` and \`limit\` for long files
+- Optional: `offset` and `limit` for long files
 - Lines > ${MAX_LINE_LENGTH} chars truncated
 - Output: cat -n format (line numbers from 1)
-
-## Supported Formats
-- Code files, text
-- Images (PNG, JPG)—displayed visually (multimodal)${CAN_READ_PDF_FILES()?\`
-- PDFs—page-by-page text and visual extraction\`:""}
-- Jupyter notebooks (.ipynb)—all cells with outputs
-- Directories: use \`ls\` via ${BASH_TOOL_NAME}
 
 ## Tips
 - Parallelize multiple file reads in single response

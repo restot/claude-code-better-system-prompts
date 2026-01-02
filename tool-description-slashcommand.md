@@ -18,7 +18,9 @@ ONLY for custom commands in Available Commands. NOT for:
 
 ${SLASH_COMMAND_LIST?\`Available Commands:
 ${SLASH_COMMAND_LIST}${TRUNCATION_NOTE}
-\`:""}Notes:
+\`:""}
+
+Notes:
 - Multiple commands: execute sequentially, verify each via \`<command-message>\`
 - Don't invoke already-running commands
 - Unlisted commands: ask user to check file and docs

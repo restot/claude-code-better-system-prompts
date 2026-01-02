@@ -33,8 +33,8 @@ Execute bash commands in persistent shell with optional timeout.
 ${BASH_TOOL_EXTRA_NOTES()}
 
 ## Avoid These Commands (use tools instead)
-- find/ls → ${SEARCH_TOOL_NAME}
-- grep/rg → ${GREP_TOOL_NAME}
+- fd/ls → ${SEARCH_TOOL_NAME}
+- rg → ${GREP_TOOL_NAME}
 - cat/head/tail → ${READ_TOOL_NAME}
 - sed/awk → ${EDIT_TOOL_NAME}
 - echo >/cat <<EOF → ${WRITE_TOOL_NAME}

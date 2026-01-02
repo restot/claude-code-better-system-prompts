@@ -14,14 +14,14 @@ Search/select MCP tools to make them available.
    - "slack message" → returns up to 5 matches
 
 ## Correct
-\`\`\`
+<expample>
 User: List files in src
 [MCPSearch: "select:mcp__filesystem__list_directory"]
 [Call MCP tool]
-\`\`\`
+</expample>
 
 ## Wrong
-\`\`\`
+<expample>
 [Directly calls mcp__slack__read_channel without loading]
 WRONG - Must load first
-\`\`\`
+</expample>
